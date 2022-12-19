@@ -1,0 +1,58 @@
+{
+    "name": "opendaje/workerman-runtime",
+    "type": "library",
+    "description": "Workerman runtime for symfony framework",
+    "version": "0.1.1",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zeri Teclai",
+            "email": "teclaizerai@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0.5",
+        "symfony/runtime": "^5.4 || ^6.0"
+    },
+    "require-dev": {
+        "bamarni/composer-bin-plugin": "^1.8",
+        "phpunit/phpunit": "^9.5",
+        "workerman/workerman": "^4.1"
+    },
+    "suggest": {
+        "ext-event": "For better performance. "
+    },
+    "config": {
+        "allow-plugins": {
+            "bamarni/composer-bin-plugin": true,
+            "symfony/runtime": true
+        },
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "bamarni-bin": {
+            "bin-links": true,
+            "forward-command": false,
+            "target-directory": "tools"
+        },
+        "branch-alias": {
+            "dev-main": "0.2-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "OpenDaje\\WorkermanRuntime\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OpenDaje\\WorkermanRuntime\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
